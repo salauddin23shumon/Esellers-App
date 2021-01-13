@@ -41,7 +41,7 @@ public class SessionManager {
     }
 
     public void createSession(Users user) {
-        Log.e(TAG, "createSession: " + user.isHasDifferentAddress());
+//        Log.e(TAG, "createSession: " + user.isHasDifferentAddress());
         editor.putBoolean(LOGIN, true);
         editor.putString(ID, String.valueOf(user.getId()));
         editor.putString(USER_NAME, user.getName());

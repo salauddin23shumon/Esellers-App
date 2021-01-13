@@ -96,7 +96,8 @@ public class ProductDetailsFragment extends Fragment {
         vendorTV.setText(product.getVendorName());
         manufacTV.setText(product.getManufacturerName());
         productTV.setText(product.getProductName());
-        priceTV.setText(product.getProductPrice());
+        priceTV.setText("TK "+product.getProductPrice());
+        ratingBar.setRating(Float.parseFloat(product.getRating()));
         Glide.with(this).load(BASE_URL+product.getProductImage()).into(productIV);
 
         productIV.setOnClickListener(new View.OnClickListener() {

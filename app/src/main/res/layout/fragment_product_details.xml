@@ -93,7 +93,6 @@
                     android:layout_centerInParent="true"
                     android:progressBackgroundTint="@color/ratingStrokeColor"
                     android:progressTint="@color/ratingFillColor"
-                    android:rating="3"
                     android:scaleX=".9"
                     android:scaleY=".9" />
 

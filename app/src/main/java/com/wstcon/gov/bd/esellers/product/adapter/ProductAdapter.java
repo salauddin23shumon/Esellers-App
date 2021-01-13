@@ -84,7 +84,7 @@ public class ProductAdapter extends RecyclerView.Adapter implements PaginationLi
                 final Product newProduct = productList.get(position);
                 Log.e(TAG, "onBindViewHolder: " + newProduct.getId());
 
-                productViewHolder.priceTV.setText(newProduct.getProductPrice());
+                productViewHolder.priceTV.setText("TK "+newProduct.getProductPrice());
                 productViewHolder.productTV.setText(newProduct.getProductName());
                 productViewHolder.ratingBar.setRating(Float.parseFloat(newProduct.getRating()));
 
