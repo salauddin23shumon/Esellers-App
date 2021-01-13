@@ -69,7 +69,6 @@
                 android:numStars="5"
                 android:scaleX="0.8"
                 android:scaleY="0.8"
-                android:rating="3.5"
                 android:isIndicator="true"
                 style="?android:attr/ratingBarStyleSmall"
                 android:progressTint="@color/ratingFillColor"
@@ -90,11 +89,13 @@
                     android:layout_weight="3"
                     android:background="@drawable/border3"
                     android:textAlignment="center"
+                    android:clickable="true"
                     android:text="Add To Cart"
                     android:textAllCaps="false"
                     android:textSize="12sp"
                     android:textColor="#fff"
-                    android:padding="2dp"/>
+                    android:padding="2dp"
+                    android:focusable="true" />
 
                 <ImageView
                     android:id="@+id/wishBtn"
