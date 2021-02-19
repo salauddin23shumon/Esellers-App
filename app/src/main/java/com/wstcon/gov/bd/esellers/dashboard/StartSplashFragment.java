@@ -295,7 +295,7 @@ public class StartSplashFragment extends Fragment {
 
     @Subscribe(threadMode = ThreadMode.MAIN)
     public void onEvent(EventBusMessenger eventBusMessenger) {
-        Log.d(TAG, "onEvent: called" + "  " + eventBusMessenger.isFailed());
+        Log.d(TAG, "onEvent: " + "  " + eventBusMessenger.isFailed());
         if (eventBusMessenger.isFailed()) {
             gifImageView.setVisibility(View.GONE);
             tryBtn.setVisibility(View.VISIBLE);

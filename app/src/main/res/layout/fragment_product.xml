@@ -10,9 +10,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:background="@drawable/cat_border"
+        android:background="@drawable/app_theme_bg"
         android:layout_marginBottom="5dp"
-        android:layout_marginTop="5dp"
         android:id="@+id/catLayout">
 
         <RelativeLayout

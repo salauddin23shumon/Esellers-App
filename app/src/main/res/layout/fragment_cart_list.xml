@@ -57,7 +57,7 @@
                 android:textStyle="bold"
                 android:text="1500 Tk"
                 android:textSize="20sp"
-                android:textColor="@color/red" />
+                android:textColor="@color/colorPrimary" />
 
         </LinearLayout>
 

@@ -15,6 +15,7 @@ import android.widget.Toast;
 import android.widget.ViewFlipper;
 
 import androidx.annotation.NonNull;
+import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -108,7 +109,8 @@ public class MixedAdapter extends RecyclerView.Adapter {
 
             verticalViewHolder.horizontalRV.setHasFixedSize(true);
             HorizontalAdapter horizontalAdapter = new HorizontalAdapter(context, hmList);
-            verticalViewHolder.horizontalRV.setLayoutManager(new LinearLayoutManager(context, LinearLayoutManager.HORIZONTAL, false));
+            GridLayoutManager gridLayoutManager = new GridLayoutManager(context, 1, GridLayoutManager.HORIZONTAL, false);
+            verticalViewHolder.horizontalRV.setLayoutManager(gridLayoutManager);
             verticalViewHolder.horizontalRV.setAdapter(horizontalAdapter);
 
         } else if (holder instanceof CategoryHolder) {
@@ -165,7 +167,7 @@ public class MixedAdapter extends RecyclerView.Adapter {
             texViewHeaderText = itemView.findViewById(R.id.texViewHeaderText);
             textViewCategory = itemView.findViewById(R.id.textViewCategory);
             viewFlipper = itemView.findViewById(R.id.flipper);
-            LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(ViewFlipper.LayoutParams.MATCH_PARENT, ViewFlipper.LayoutParams.MATCH_PARENT);
+            LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.MATCH_PARENT);
             Log.e("if header", "onBindViewHolder: " + sliders.size());
             for (SliderImage s : sliders) {
                 setImageInFlipper(s, params);
@@ -176,7 +178,7 @@ public class MixedAdapter extends RecyclerView.Adapter {
             ImageView image = new ImageView(context);
 //            image.setBackgroundResource(R.drawable.image_round_border);
 //            image.setClipToOutline(true);
-
+            image.setScaleType(ImageView.ScaleType.CENTER_CROP);
             image.setLayoutParams(params);
             image.setImageBitmap(getRoundedCornerBitmap(slider.getBitmap(),50));
             viewFlipper.addView(image);
@@ -228,7 +230,7 @@ public class MixedAdapter extends RecyclerView.Adapter {
             parms.setMargins(20, 0, 20, 0);
             view.setLayoutParams(parms);
 
-            imageView.setImageBitmap(getRoundedCornerBitmap(category.getBitmap(),120));
+            imageView.setImageBitmap(getRoundedCornerBitmap(category.getBitmap(),180));
 //            imageView.setImageBitmap(category.getBitmap());
             linearLayout.addView(view);
             imageView.setId(category.getId());
